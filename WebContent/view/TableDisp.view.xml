@@ -1,0 +1,35 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="MM_REPORT.controller.TableDisp"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="false">
+		<!-- Content Section -->
+		<content>
+			<HBox>
+				<Button id="BtnSearch" type="Default" text="搜索" press="onSearch">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Button>
+			</HBox>
+		</content>
+
+		<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}"
+			showOverflowSelectList="true" enableTabReordering="true"
+			class="sapUiResponsiveContentPadding">
+			<items>
+				<IconTabFilter text="所属单位权限管控">
+					<mvc:XMLView viewName="MM_REPORT.view.suoshudanwei"></mvc:XMLView>
+				</IconTabFilter>
+				<IconTabFilter text="集团管控权限管控">
+					<mvc:XMLView viewName="MM_REPORT.view.jituanguankong"></mvc:XMLView>
+				</IconTabFilter>
+				<IconTabFilter text="冻结TCODE清单管控">
+					<!-- <mvc:XMLView viewName="MM_REPORT.view.dongjietcode"></mvc:XMLView> -->
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+
+	</Page>
+
+</core:View>
+

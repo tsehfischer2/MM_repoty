@@ -1,0 +1,13 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="MM_REPORT.controller.dongjietcode"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+			<VBox binding="{/ProductCollection3}">
+				<RadioButton groupName="GroupC" text="维护" selected="true" />
+				<RadioButton groupName="GroupC" text="查询" />
+				<RadioButton groupName="GroupC" text="文件上传" />
+			</VBox>
+		</content>
+	</Page>
+</core:View>

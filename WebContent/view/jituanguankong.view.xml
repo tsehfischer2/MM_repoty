@@ -1,0 +1,23 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="MM_REPORT.controller.jituanguankong"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+			<VBox binding="{/ProductCollection2}">
+				<RadioButton groupName="GroupB" text="维护(T-code层面管控权限)"
+					selected="true" />
+				<RadioButton groupName="GroupB" text="维护(授权对象层面管控权限)" />
+				<RadioButton groupName="GroupB" text="查询(T-code层面管控权限)" />
+				<RadioButton groupName="GroupB" text="查询(授权对象层面管控权限)" />
+				<f:SimpleForm>
+					<Label text="模块" labelFor="tb2_Moudle" width="100%" />
+					<Input id="tb2_Moudle" type="Text" showSuggestion="true"
+						showValueHelp="true" valueHelpRequest="AddressValueHelp" />
+				</f:SimpleForm>
+				<RadioButton groupName="GroupB" text="文件上传(T-code层面管控权限)" />
+				<RadioButton groupName="GroupB" text="文件上传(授权对象层面管控权限)" />
+			</VBox>
+		</content>
+
+	</Page>
+</core:View>

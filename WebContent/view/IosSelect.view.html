@@ -1,0 +1,30 @@
+<template data-controller-name="MM_REPORT.controller.IosSelect">
+<!--  https://github.com/zhoushengmufc/iosselect -->
+<div data-sap-ui-type="sap.m.Page" data-title="Title">
+	<div data-sap-ui-aggregation="content">
+
+		<script type="text/javascript">
+			var showBankDom = document.querySelector('#showBank');
+			var bankIdDom = document.querySelector('#bankId');
+			showBankDom.addEventListener('click', function() {
+				var bankId = showBankDom.dataset['id'];
+				var bankName = showBankDom.dataset['value'];
+
+				var bankSelect = new IosSelect(1, [ data ], {
+					container : '.container',
+					title : 'ÒøÐÐ¿¨Ñ¡Ôñ',
+					itemHeight : 50,
+					itemShowCount : 3,
+					oneLevelId : bankId,
+					callback : function(selectOneObj) {
+						bankIdDom.value = selectOneObj.id;
+						showBankDom.innerHTML = selectOneObj.value;
+						showBankDom.dataset['id'] = selectOneObj.id;
+						showBankDom.dataset['value'] = selectOneObj.value;
+					}
+				});
+			});
+		</script>
+	</div>
+</div>
+</template>

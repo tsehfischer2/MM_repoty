@@ -1,0 +1,57 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="MM_REPORT.controller.suoshudanwei"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+
+			<VBox binding="{/ProductCollection}">
+				<RadioButton groupName="GroupA" text="维护" selected="true" />
+				<RadioButton groupName="GroupA" text="查询" />
+
+				<f:SimpleForm>
+
+					<Label text="模块" labelFor="tb1_Moudle" width="100%" />
+					<Input id="tb1_Moudle" type="Text" showSuggestion="true"
+						showValueHelp="true" valueHelpRequest="tb1MoudleHandleValueHelp"
+						suggestionItems="{/System}">
+						<suggestionItems>
+							<core:Item text="{SystemCate}" />
+						</suggestionItems>
+					</Input>
+					<Label text="事务代码" labelFor="tb1_Tcode" width="100%" />
+					<Input id="tb1_Tcode" type="Text" showSuggestion="true"
+						showValueHelp="true" valueHelpRequest="handleValueHelp"
+						suggestionItems="{/System}">
+						<suggestionItems>
+							<core:Item text="{SystemCate}" />
+						</suggestionItems>
+					</Input>
+					<Label text="权限对象" labelFor="tb1_AuthObject" width="100%" />
+					<Input id="tb1_AuthObject" type="Text" showSuggestion="true"
+						showValueHelp="true" valueHelpRequest="handleValueHelp"
+						suggestionItems="{/System}">
+						<suggestionItems>
+							<core:Item text="{SystemCate}" />
+						</suggestionItems>
+					</Input>
+					<Label text="基本权限控制点" labelFor="tb1_basiscontrol" width="100%" />
+					<Input id="tb1_basiscontrol" type="Text" showSuggestion="true"
+						showValueHelp="true" valueHelpRequest="handleValueHelp"
+						suggestionItems="{/System}">
+						<suggestionItems>
+							<core:Item text="{SystemCate}" />
+						</suggestionItems>
+					</Input>
+				</f:SimpleForm>
+				<RadioButton groupName="GroupA" text="文件上传" />
+				<f:SimpleForm>
+					<Label text="文件路径" labelFor="uploadAddress" width="100%" />
+					<Input id="uploadAddress" type="Text" placeholder="Enter Address ..."
+						showSuggestion="true" showValueHelp="true" valueHelpRequest="AddressValueHelp" />
+				</f:SimpleForm>
+			</VBox>
+
+		</content>
+
+	</Page>
+</core:View>
